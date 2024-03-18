@@ -1,0 +1,1 @@
+rm ../log_dir_baseline/* ../log_dir_data_aug/* ../log_dir_delta/* ../log_dir_dtype/* ../log_dir_features/* ../log_dir_model/* ../log_dir_windowing/* ../log_dir_pruning/* ../log_dir_quantization/*
