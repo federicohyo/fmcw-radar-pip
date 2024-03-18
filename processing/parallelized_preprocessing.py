@@ -409,25 +409,20 @@ def to_db(vals):
     return 10 * torch.log10(vals_stable)
 
 def delta_frames_radar(signal, rsc_report = None, dtype = None):
-    # signal dimension: batch, chirp, sample
-    # print('signal shape: ', signal.shape)
-    # flattened_batched_tensors = signal.view(signal.shape[0],-1)\\
-
     if rsc_report:
         add_resources_info(rsc_report, 'delta_frames_radar', compute_ops_windowing, signal, dtype = dtype)
 
+    # Operations for flattening the tensor
     flattened_batched_tensors = signal.transpose(1,2).reshape(signal.shape[0],-1)
-    # print('flattened_batched_tensors shape: ', flattened_batched_tensors.shape)
-
+    
+    # Apply delta
     delta_tensor_flatt = flattened_batched_tensors[:,1:] - flattened_batched_tensors[:,:-1]
+    
+    # Getting it back into the correct shape
     zero_column = signal.new_zeros(signal.shape[0], 1)
     delta_tensor_flatt = torch.cat((zero_column, delta_tensor_flatt), 1)
-
     delta_tensor = delta_tensor_flatt.reshape(signal.shape[0], signal.shape[2], signal.shape[1]).transpose(1,2)
-    # delta_tensor = delta_tensor.permute(0,2,1)
         
-    # print("Sparsity tensor",calculate_sparsity(delta_tensor))
-
     return delta_tensor
 
 def float_to_float8(input_tensor):

@@ -5,12 +5,9 @@ import math
 
 # Confiugre these to your own directories:
 # data_dir = '/local/efficient_radar_pipeline/'
-# cache_file_dir = '/local/efficient_radar_pipeline/preprocessed_data/'
 for_parallelized_preprocessing_example_rad_file = './data/radar8Ghz-DVS-marshaling_signals_20220901_publication_anonymized_v1/train/foyer/2-move_back_v1-300/ofxRadar8Ghz_2022-04-21_13-54-09.rad'
 
-# data_dir = './data/radar8Ghz-DVS-marshaling_signals_20220901_publication_anonymized_v2/train'
 data_dir = './data/radar8Ghz-DVS-marshaling_signals_20220901_publication_anonymized_v1/train'
-# data_dir_test = './data/radar8Ghz-DVS-marshaling_signals_20220901_publication_anonymized_v2/test'
 data_dir_test = './data/radar8Ghz-DVS-marshaling_signals_20220901_publication_anonymized_v1/test'
 # cache_file_dir = './data/preprocessed_data'
 cache_file_dir = '/local/marshalling_efficient/'

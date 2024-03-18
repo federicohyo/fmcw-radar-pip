@@ -20,7 +20,7 @@ from models_architecture.efficientnetb1 import EfficientNetB1, EfficientNetB1_cu
 from models_architecture.levit_timm import LeViT_128s, LeViT_128
 from models_architecture.moganet import *
 from models_architecture.moganet import custom_moganet_pretrained
-from models_architecture.two_channels_two_models import TwoChannelsTwoModels
+# from models_architecture.two_channels_two_models import TwoChannelsTwoModels
 
 import torch.nn.utils.prune as prune
 from model_compression.pruning import prune_model, prune_model_iterative, human_readable_count, count_model_parameters, count_model_parameters_nonzero, get_prunable_parameters
@@ -121,7 +121,7 @@ if __name__ == "__main__":
     # For debugging
     # grid.append(debugging_config)
 
-    # grid.append(baseline)
+    grid.append(baseline)
     # grid.append(la_grande_finale_v4)
     
     # grid.append(la_grande_finale_float16)
@@ -154,7 +154,7 @@ if __name__ == "__main__":
     # grid.append(la_grande_finale_pruning_unstructured_iterative_array_even_further[2])
     # grid.append(la_grande_finale_best_pruning)
 
-    grid.append(efficientnetb1_ptq_x86)
+    # grid.append(efficientnetb1_ptq_x86)
     # grid.append(efficientnetb1_qat_x86_epochs_2)
     # grid.append(baseline_levit_official_128)
 

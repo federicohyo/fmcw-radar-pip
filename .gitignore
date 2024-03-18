@@ -1,2 +1,10 @@
 train_marshalling.run
 train_marshalling.sh
+
+data/*
+data_module/__pycache__/
+data_module/prepared_datamodule.pkl
+data_module/prepared_datamodule_test.pkl
+models/*
+scratch/
+*.pyc
