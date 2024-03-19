@@ -9,8 +9,8 @@ for_parallelized_preprocessing_example_rad_file = './data/radar8Ghz-DVS-marshali
 
 data_dir = './data/radar8Ghz-DVS-marshaling_signals_20220901_publication_anonymized_v1/train'
 data_dir_test = './data/radar8Ghz-DVS-marshaling_signals_20220901_publication_anonymized_v1/test'
-# cache_file_dir = './data/preprocessed_data'
-cache_file_dir = '/local/marshalling_efficient/'
+cache_file_dir = './data/preprocessed_data'
+# cache_file_dir = '/local/marshalling_efficient/'
 
 n_chirps = 192
 samples_per_chirp = 512
