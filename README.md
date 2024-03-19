@@ -1,10 +1,17 @@
+
+# Requirements
+python version >= 3.10.8.4
+CUDA version >= 11.8.0 
+
 # Setting up the Python Environment and Getting the data automatically
+
+Creates python environment 'scratch', downloads the dataset and puts it into correct folder and uzips it.
+~~~
 . setup.sh
+~~~
 
 # Setting up the Python environment
 
-python version >= 3.10.8.4
-CUDA version >= 11.8.0 
 
 ~~~
 python -m venv scratch
@@ -61,6 +68,7 @@ cache_file_dir = '/local/marshalling_efficient/'
 simple run
 ~~~
 python main.py
+~~~
 
 arguments:
 -j 'integer' # makes copy of processing dataset so multiple python scripts can read from md5 file
