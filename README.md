@@ -1,6 +1,6 @@
 
 # Citation - Paper
-Jim Vermunt and Federico Corradi, FMCW Radar Signal Processing Pipeline for Human Gesture Classification, in the proceeding of the European Microwave Week 2024, Paris, FR
+Jim Vermunt and Federico Corradi, *FMCW Radar Signal Processing Pipeline for Human Gesture Classification*, in the proceeding of the European Microwave Week 2024, Paris, FR
 
 
 # Requirements
